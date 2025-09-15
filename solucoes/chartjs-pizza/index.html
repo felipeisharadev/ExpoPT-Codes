@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gráfico de Pizza com Chart.js</title>
+
+  <!-- Importa a biblioteca Chart.js direto do CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f8f8f8;
+      text-align: center;
+    }
+    .grafico {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    canvas {
+      width: 300px !important;
+      height: 300px !important;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Gráfico de Pizza</h1>
+
+  <div class="grafico">
+    <!-- O gráfico aparece dentro deste canvas -->
+    <canvas id="pizzaChart"></canvas>
+  </div>
+
+  <p style="margin-top:20px;">
+    <a href="../../index.html">← Voltar para a página inicial</a>
+  </p>
+
+  <script>
+    // Seleciona o elemento canvas
+    const ctx = document.getElementById('pizzaChart').getContext('2d');
+
+    // Cria o gráfico
+    const pizzaChart = new Chart(ctx, {
+      type: 'pie', // tipo pizza
+      data: {
+        labels: ['Vermelho', 'Azul', 'Amarelo'], // nomes das fatias
+        datasets: [{
+          label: 'Cores favoritas',
+          data: [10, 14, 6], // valores de cada fatia
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.7)',  // vermelho
+            'rgba(54, 162, 235, 0.7)',  // azul
+            'rgba(255, 206, 86, 0.7)'   // amarelo
+          ],
+          borderColor: '#fff',
+          borderWidth: 2
+        }]
+      }
+    });
+  </script>
+</body>
+</html>

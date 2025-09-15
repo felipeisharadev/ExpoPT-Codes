@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gráfico de Barras com Chart.js</title>
+
+  <!-- Importa a biblioteca Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f8f8f8;
+      text-align: center;
+    }
+    .grafico {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    canvas {
+      width: 400px !important;
+      height: 300px !important;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Gráfico de Barras</h1>
+
+  <div class="grafico">
+    <canvas id="barraChart"></canvas>
+  </div>
+
+  <p style="margin-top:20px;">
+    <a href="../../index.html">← Voltar para a página inicial</a>
+  </p>
+
+  <script>
+    // Seleciona o canvas
+    const ctx = document.getElementById('barraChart').getContext('2d');
+
+    // Cria o gráfico
+    const barraChart = new Chart(ctx, {
+      type: 'bar', // tipo barra
+      data: {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio'], // categorias no eixo X
+        datasets: [{
+          label: 'Vendas (em unidades)',
+          data: [12, 25, 18, 30, 22], // valores de cada barra
+          backgroundColor: 'rgba(75, 192, 192, 0.7)',
+          borderColor: 'rgba(75, 192, 192, 1)',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true // eixo Y começa no 0
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
