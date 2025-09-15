@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini Soluções — Portal da Turma</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="scripts/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Mini Soluções</h1>
+      <p class="site-subtitle">Selecione um card para abrir a prática correspondente.</p>
+
+      <label class="search-label" for="search">
+        <span class="sr-only">Buscar soluções</span>
+        <input id="search" type="search" placeholder="Buscar por nome, tag, tecnologia..." autocomplete="off" />
+      </label>
+    </div>
+  </header>
+
+  <main class="container" id="conteudo">
+    <!-- Grid de cards -->
+    <section class="cards" aria-label="Lista de mini soluções">
+      <!-- Exemplo de CARD 1 -->
+      <article class="card" data-tags="youtube video embed midia">
+        <div class="card-body">
+          <h2 class="card-title">
+            <a href="solucoes/youtube-video/index.html">Vídeo do YouTube incorporado</a>
+          </h2>
+          <p class="card-desc">Página simples com embed responsivo de um vídeo do YouTube.</p>
+        </div>
+        <footer class="card-footer">
+          <a class="card-link" href="solucoes/youtube-video/index.html" aria-label="Abrir: Vídeo do YouTube incorporado">Abrir ↗</a>
+        </footer>
+      </article>
+
+            <!-- Exemplo de CARD 1 -->
+      <article class="card" data-tags="youtube video embed midia">
+        <div class="card-body">
+          <h2 class="card-title">
+            <a href="solucoes/youtube-video/index.html">Vídeo do YouTube redirecionamento</a>
+          </h2>
+          <p class="card-desc">Página com imagem de um vídeo do youtube eredirecionamento.</p>
+        </div>
+        <footer class="card-footer">
+          <a class="card-link" href="solucoes/youtube-video-redirecionamento/index.html" aria-label="Abrir: Vídeo do YouTube incorporado">Abrir ↗</a>
+        </footer>
+      </article>
+
+        <!-- CARD 3 -->
+      <article class="card" data-tags="bootstrap carrossel slider componente">
+        <div class="card-body">
+          <h2 class="card-title">
+            <a href="solucoes/banner-video/index.html">Banner com vídeo de fundo</a>
+          </h2>
+          <p class="card-desc">Exemplo de banner com vídeo ao fundo.</p>
+        </div>
+        <footer class="card-footer">
+          <a class="card-link" href="solucoes/banner-video/index.html">Abrir ↗</a>
+        </footer>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="card" data-tags="bootstrap carrossel slider componente">
+        <div class="card-body">
+          <h2 class="card-title">
+            <a href="solucoes/carrossel-bootstrap/index.html">Carrossel com Bootstrap</a>
+          </h2>
+          <p class="card-desc">Exemplo de carrossel de imagens usando o componente do Bootstrap.</p>
+        </div>
+        <footer class="card-footer">
+          <a class="card-link" href="solucoes/carrossel-bootstrap/index.html">Abrir ↗</a>
+        </footer>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="card" data-tags="css animacao keyframes transicao">
+        <div class="card-body">
+          <h2 class="card-title">
+            <a href="solucoes/cards/index.html">Cards</a>
+          </h2>
+          <p class="card-desc">Cards com bootstrap.</p>
+        </div>
+        <footer class="card-footer">
+          <a class="card-link" href="solucoes/cards/index.html">Abrir ↗</a>
+        </footer>
+      </article>
+
+      <!-- DICA: duplique um <article class="card"> para criar novas entradas -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>Projeto didático — Turma de Front-end</small>
+    </div>
+  </footer>
+</body>
+</html>

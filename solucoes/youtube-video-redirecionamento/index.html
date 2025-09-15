@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Miniatura de Vídeo do YouTube</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .thumb {
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .thumb img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .thumb span {
+      display: block;
+      padding: 10px;
+      background: #222;
+      color: #fff;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de miniatura do YouTube</h1>
+
+  <!--
+    Como funciona a miniatura do YouTube:
+
+    Todo vídeo do YouTube tem um ID único (a parte depois de "watch?v=" na URL).
+    Exemplo: https://www.youtube.com/watch?v=Pu_nY2EvPT0
+    O ID desse vídeo é: Pu_nY2EvPT0
+
+    Para pegar a imagem de miniatura, usamos o servidor de imagens do YouTube:
+      https://i.ytimg.com/vi/VIDEO_ID/NOME_DA_IMAGEM.jpg
+
+    Os principais nomes de imagem são:
+      default.jpg      → 120x90 (pequena)
+      mqdefault.jpg    → 320x180 (média)
+      hqdefault.jpg    → 480x360 (alta qualidade)
+      sddefault.jpg    → 640x480 (se disponível)
+      maxresdefault.jpg → 1280x720 ou mais (se disponível)
+
+    Exemplo prático:
+      ID: Pu_nY2EvPT0
+      Miniatura HQ: https://i.ytimg.com/vi/Pu_nY2EvPT0/hqdefault.jpg
+  -->
+
+  <!-- Aqui está o link que leva para o YouTube, com a miniatura como prévia -->
+  <a class="thumb" href="https://www.youtube.com/watch?v=Pu_nY2EvPT0" target="_blank" rel="noopener">
+    <img src="https://i.ytimg.com/vi/Pu_nY2EvPT0/hqdefault.jpg" alt="Miniatura do vídeo">
+    <span>▶ Assistir no YouTube</span>
+  </a>
+
+  <p>
+    Para trocar o vídeo, basta substituir o ID <code>Pu_nY2EvPT0</code> na URL da imagem e no link do YouTube pelo ID do vídeo do Youtube.
+  </p>
+
+  <p><a href="../../index.html">← Voltar para a página inicial</a></p>
+</body>
+</html>
